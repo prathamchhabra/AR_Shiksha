@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<script src="js/aframe.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="js/aframe-ar.js"></script>
+
+<style type="text/css">
+	
+#arjsDebugUIContainer 
+{
+   display: none; !important;
+}
+	
+.a-enter-vr-button
+{
+   display: none; !important;		
+}
+</style>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+<a-scene embedded arjs="sourceType:webcam;"> 
+	
+	
+	<a-assets> 
+		<!-- <video id="video" autoplay loop="true" src="assets/twitter-anim.mov"></video> -->
+		<img id="galaxy" src="ihttps://s3-us-west-2.amazonaws.com/s.cdpn.io/780593/galaxy.jpg">
+		<img id="moon" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/moon_1024.jpg">
+		  <img id="clouds" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_clouds_2048.png">
+		  <img id="venus" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/780593/5710820393_a36f3c730b_m.jpg">
+		<!-- <img id="hello" src="assets/matt-face.png"> -->
+ 	</a-assets>  
+	
+	 <a-marker-camera preset='custom' type='pattern' url='./assets/solarsystem.patt'>
+		<!-- <a-image src="#hello" width="1.8" height="1" position="0 0 0" rotation="270 0 0"></a-image> -->
+		<a-entity layout="type: circle; margin: 20" position="0 2 -5" radius=0.5></a-entity>
+			<a-animation        attribute="rotation"
+		  dur="5000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 <a-sphere  src="" position="0 0 0" radius="1" color="#9C2A3C" material="src: #clouds">
+			<a-animation        attribute="rotation"
+		  dur="10000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+	 <a-sphere src="" position="3 2 1" radius=".5" color="#5EFDE1"  material="src: #moon">
+			<a-animation        attribute="rotation"
+		  dur="7000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+	 <a-sphere color="#F8D05B" material="src: #moon" position="2 -2 0" radius=".5">
+	   <a-animation        attribute="rotation"
+		  dur="2000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+	 <a-sphere src="" position="-7 0 -4" radius="1.25" color="#1C7891"  material="src: #moon">
+		<a-animation        attribute="rotation"
+		  dur="5000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+		<a-sphere position="-2 0 -1" radius=".2" color="#5C7294"  material="src: #moon">
+		<a-animation        attribute="rotation"
+		  dur="4000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+	   <a-sphere src="" position="-4 3 1" radius=".1" color="#A599B5"  material="src: #moon">
+			<a-animation        attribute="rotation"
+		  dur="1000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+		   <a-sphere src="" position="-2 1 -5" radius=".1" color="#E5446D"  material="src:#clouds">
+			<a-animation        attribute="rotation"
+		  dur="1000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+			   <a-sphere src="" position="-2 -5 5" radius=".1" color="#E5446D"  material="src:#clouds">
+			<a-animation        attribute="rotation"
+		  dur="1000"
+		   to="0 360 0"
+	   repeat="indefinite"
+		easing="linear">
+		  </a-animation>
+	 </a-sphere>
+
+   
+		
+	</a-marker-camera> 
+	
+	
+
+		
+		
+
+
+	<a-entity camera></a-entity> 
+
+</a-scene>
+	
+	
+	
+	
+</body>
+</html>
+		

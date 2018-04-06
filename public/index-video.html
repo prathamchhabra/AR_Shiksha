@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<script src="js/aframe.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="js/aframe-ar.js"></script>
+
+<style type="text/css">
+	
+#arjsDebugUIContainer 
+{
+   display: none; !important;
+}
+	
+.a-enter-vr-button
+{
+   display: none; !important;		
+}
+</style>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+
+<a-scene embedded arjs="sourceType:webcam;"> 
+	
+	
+	<a-assets> 
+		<video id="video" autoplay loop="true" src="assets/twitter-anim.mov"></video>
+ 	</a-assets> 
+	
+	<a-video src="#video" width="1.8" height="1" position="0 0 0" rotation="270 0 0"></a-video>
+	
+	
+
+	 <a-marker-camera preset='custom' type='pattern' url='./assets/pattern-marker1.patt'></a-marker-camera> 
+
+	<a-entity camera></a-entity> 
+
+</a-scene>
+	
+	
+	
+	
+</body>
+</html>

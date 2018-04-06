@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<!-- include aframe -->
+<script src="js/aframe.min.js"></script>
+<!-- include aframe-ar.js -->
+<script src="js/aframe-ar.js"></script>
+
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+
+	<!-- enable artoolkit on this scene -->
+	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
+
+		<a-image position="0 0 0" rotation="90 180 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/red-dot.png"></a-image>
+		
+		<a-image position="0 0.2 0" rotation="270 0 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/matt-face.png"></a-image> 
+		
+		<a-image position="0 0.4 0" rotation="270 0 0" height="1" width="1"  src="https://raw.githubusercontent.com/mattGraphics/randomfiles/master/hello-you-text.png"></a-image> 
+		
+
+		 <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/mattGraphics/randomfiles/master/big-m.patt'></a-marker-camera> 
+	</a-scene>
+</body>
+</html>
